@@ -1,0 +1,29 @@
+<section id="development-process" class="section gradient-pattern-3">
+  <div class="container">
+    <h2 class="section-title">Our Development Process</h2>
+    
+    <div class="process-intro">
+      <p>
+        Our structured Software Development Life Cycle ensures consistent quality, transparency, and successful outcomes.
+        We blend agile methodologies with proven engineering practices to deliver exceptional results.
+      </p>
+    </div>
+    
+    <div class="process-timeline">
+      <div class="process-step" *ngFor="let step of processSteps; let i = index" [class.even]="i % 2 === 1">
+        <div class="step-number">
+          <span>{{ step.step }}</span>
+        </div>
+        
+        <div class="step-content">
+          <h3 class="step-title">{{ step.title }}</h3>
+          <p class="step-description">{{ step.description }}</p>
+          
+          <ul class="step-tasks">
+            <li *ngFor="let task of step.tasks">{{ task }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

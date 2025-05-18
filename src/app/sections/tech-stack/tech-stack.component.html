@@ -1,0 +1,27 @@
+<section id="tech-stack" class="section gradient-pattern-2">
+  <div class="container">
+    <h2 class="section-title">Our Tech Stack</h2>
+    
+    <div class="tech-intro">
+      <p>
+        We leverage the latest and most powerful technologies to build cutting-edge solutions. 
+        Our diverse tech stack enables us to select the right tools for each unique project and challenge.
+      </p>
+    </div>
+    
+    <div class="tech-categories">
+      <div class="tech-category" *ngFor="let category of techCategories">
+        <h3 class="category-title">{{ category.name }}</h3>
+        
+        <div class="tech-grid">
+          <div class="tech-item" *ngFor="let tech of category.technologies">
+            <div class="tech-logo">
+              <img [src]="tech.logo" [alt]="tech.name + ' logo'" />
+            </div>
+            <div class="tech-name">{{ tech.name }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

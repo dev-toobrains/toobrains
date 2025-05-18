@@ -1,0 +1,47 @@
+<section id="portfolio" class="section gradient-pattern-2">
+  <div class="container">
+    <h2 class="section-title">Our Portfolio</h2>
+    
+    <div class="portfolio-intro">
+      <p>
+        Explore some of our recent projects that showcase our expertise in creating innovative solutions 
+        across various industries and technologies.
+      </p>
+    </div>
+    
+    <div class="portfolio-filters">
+      <button 
+        *ngFor="let filter of filters" 
+        class="filter-button" 
+        [class.active]="activeFilter === filter.id"
+        (click)="setFilter(filter.id)"
+      >
+        {{ filter.label }}
+      </button>
+    </div>
+    
+    <div class="portfolio-grid">
+      <div class="portfolio-item" *ngFor="let project of filteredProjects">
+        <div class="portfolio-card">
+          <div class="portfolio-image">
+            <img [src]="project.image" [alt]="project.title" />
+            <div class="portfolio-overlay">
+              <a href="#" class="portfolio-link">View Project</a>
+            </div>
+          </div>
+          <div class="portfolio-content">
+            <h3 class="portfolio-title">{{ project.title }}</h3>
+            <p class="portfolio-description">{{ project.description }}</p>
+            <div class="portfolio-technologies">
+              <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="portfolio-cta">
+      <a href="#contact" class="btn btn-primary">Start Your Project</a>
+    </div>
+  </div>
+</section>

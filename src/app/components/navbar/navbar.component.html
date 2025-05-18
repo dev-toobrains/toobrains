@@ -1,0 +1,33 @@
+<nav [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <div class="logo-container">
+      <a href="#" class="logo">
+        <img src="assets/logo.png" alt="Toobrains Logo" />
+        <span>Toobrains</span>
+      </a>
+    </div>
+    
+    <div class="nav-links" [class.active]="isMenuOpen">
+      <ul>
+        <li *ngFor="let item of navItems">
+          <a [href]="item.href" (click)="scrollTo(item.href); $event.preventDefault()">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+      
+      <button class="cta-button" (click)="scrollTo('#contact')">Contact Us</button>
+    </div>
+    
+    <button 
+      class="mobile-toggle" 
+      [class.active]="isMenuOpen"
+      (click)="toggleMenu()"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</nav>

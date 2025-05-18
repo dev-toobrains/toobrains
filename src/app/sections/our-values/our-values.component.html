@@ -1,0 +1,24 @@
+<section id="our-values" class="section gradient-pattern-1">
+  <div class="container">
+    <h2 class="section-title">Our Values</h2>
+    
+    <div class="values-intro">
+      <p>
+        At Toobrains, our values serve as the foundation for everything we do. They guide our decisions, 
+        shape our culture, and drive our mission to create innovative solutions that make a difference.
+      </p>
+    </div>
+    
+    <div class="values-grid">
+      <div class="value-card" *ngFor="let value of values">
+        <div class="value-icon">
+          <div class="icon-wrapper" [attr.data-icon]="value.icon">
+            <div class="icon-glow"></div>
+          </div>
+        </div>
+        <h3 class="value-title">{{ value.title }}</h3>
+        <p class="value-description">{{ value.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

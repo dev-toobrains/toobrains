@@ -1,0 +1,23 @@
+<section id="inspiration" class="section gradient-pattern-1">
+  <div class="container">
+    <h2 class="section-title">Our Inspiration</h2>
+    
+    <div class="inspiration-intro">
+      <p>
+        We draw inspiration from visionaries who have shaped our world through innovation, creativity, and bold thinking.
+        These words of wisdom continue to guide our approach to technology and problem-solving.
+      </p>
+    </div>
+    
+    <div class="quotes-grid">
+      <div class="quote-card" *ngFor="let quote of quotes">
+        <div class="quote-symbol">"</div>
+        <blockquote class="quote-text">{{ quote.text }}</blockquote>
+        <div class="quote-author">
+          <span class="author-name">{{ quote.author }}</span>
+          <span class="author-position">{{ quote.position }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

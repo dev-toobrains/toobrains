@@ -1,0 +1,62 @@
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-branding">
+          <div class="footer-logo">
+            <img src="assets/logo.png" alt="Toobrains Logo" />
+            <span>Toobrains</span>
+          </div>
+          <p>Innovative solutions for the digital age. We transform ideas into powerful, scalable applications.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" *ngFor="let social of socialLinks" [attr.aria-label]="social.label">
+              <i [class]="social.icon"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li *ngFor="let link of companyLinks">
+              <a [href]="link.href">{{ link.label }}</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Resources</h4>
+          <ul>
+            <li *ngFor="let link of resourceLinks">
+              <a [href]="link.href">{{ link.label }}</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <ul>
+            <li *ngFor="let link of legalLinks">
+              <a [href]="link.href">{{ link.label }}</a>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe to our newsletter for the latest news and updates.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email address" />
+            <button class="btn btn-primary">Subscribe</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; {{ currentYear }} Toobrains. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

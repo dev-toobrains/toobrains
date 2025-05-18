@@ -1,0 +1,38 @@
+<section id="who-we-are" class="section gradient-pattern-2">
+  <div class="container">
+    <h2 class="section-title">Who We Are</h2>
+    
+    <div class="who-we-are-grid">
+      <div class="who-we-are-content">
+        <p class="lead-text">
+          Toobrains is a forward-thinking technology company dedicated to crafting innovative digital solutions 
+          that empower businesses to thrive in the modern world.
+        </p>
+        
+        <p>
+          Founded in 2015, we've grown from a small startup into a global technology leader. Our team of passionate 
+          engineers, designers, and strategists work together to solve complex problems with elegant solutions.
+        </p>
+        
+        <p>
+          We believe that great technology should be both powerful and intuitive. That's why we focus on creating 
+          solutions that are not only technically excellent but also user-friendly and accessible.
+        </p>
+        
+        <p>
+          Our mission is to transform the way businesses operate in the digital landscape by providing cutting-edge 
+          technologies that drive growth, efficiency, and innovation.
+        </p>
+      </div>
+      
+      <div class="stats-container">
+        <div class="stats-grid">
+          <div class="stat-item" *ngFor="let stat of stats">
+            <div class="stat-value">{{ stat.value }}</div>
+            <div class="stat-label">{{ stat.label }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
